@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.dao.GtypeMapper">
+
+
+    <select id="queryAllGtypes" resultType="com.qf.entity.Gtype">
+        select g1.*,g2.gtypename as gtname from gtype g1 left join gtype g2 on g1.pid=g2.id order by g1.id
+    </select>
+
+</mapper>
